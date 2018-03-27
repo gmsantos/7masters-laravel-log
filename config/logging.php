@@ -85,6 +85,22 @@ return [
                 'token' => env('INSIGHTOPS_TOKEN'),
             ],
         ],
+
+        'queue' => [
+            'driver' => 'monolog',
+            'handler' => InsightOpsHandler::class,
+            'with' => [
+                'token' => env('INSIGHTOPS_TOKEN'),
+            ],
+        ],
+
+        'api' => [
+            'driver' => 'monolog',
+            'handler' => InsightOpsHandler::class,
+            'with' => [
+                'token' => env('INSIGHTOPS_TOKEN'),
+            ],
+        ],
     ],
 
 ];
